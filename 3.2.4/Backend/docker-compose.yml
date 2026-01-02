@@ -1,0 +1,47 @@
+# Backend/docker-compose.yml
+
+services:
+  # 1. Serviço do Backend FastAPI (HTTP)
+  fastapi_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi_controle_acesso
+    restart: always
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    #Acho que assim Ajusta o fuso horario
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=America/Sao_Paulo
+
+    volumes:
+      # Monta o volume para que o arquivo ra_validos.txt possa ser editado
+      - ./app/recursos:/app/app/recursos
+    networks:
+      - controle_acesso_net
+
+  # 2. Serviço do Broker MQTT (Mosquitto)
+  mqtt_broker:
+    image: eclipse-mosquitto:2.0
+    container_name: mosquitto_broker
+    restart: always
+    ports:
+      - "1883:1883" # Porta padrão MQTT
+      - "9001:9001" # Porta para WebSockets
+    volumes:
+      # Volumes para persistência de dados e configurações
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    networks:
+      - controle_acesso_net
+
+networks:
+  controle_acesso_net:
+    driver: bridge
+

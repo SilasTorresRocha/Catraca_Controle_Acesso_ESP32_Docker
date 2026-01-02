@@ -1,0 +1,58 @@
+// Firmware/modulos/atuadores/Atuadores.h
+
+
+
+//(Defasado, mudado para ControleCatraca.h, mover de todos os locais depois)
+
+#ifndef ATUADORES_H
+#define ATUADORES_H
+
+/*
+
+#include <Arduino.h>
+#include "../../config/MapeamentoPinos.h"
+#include "../utils/Utilidades.h"
+
+#define TAG_ATUADORES "ATUADORES"
+
+/**
+ * @brief Inicializa os pinos dos atuadores como OUTPUT.
+ */
+void inicializar_atuadores() {
+    log_info(TAG_ATUADORES, "Inicializando pinos dos atuadores...");
+    
+    // Solenoide Drive
+    pinMode(PINO_SOLENOIDE_DRIVE, OUTPUT);
+    digitalWrite(PINO_SOLENOIDE_DRIVE, LOW); // Estado inicial desligado
+
+    // Indutores
+    pinMode(PINO_INDUTOR_1, OUTPUT);
+    digitalWrite(PINO_INDUTOR_1, LOW);
+    pinMode(PINO_INDUTOR_2, OUTPUT);
+    digitalWrite(PINO_INDUTOR_2, LOW);
+    log_info(TAG_ATUADORES, "Pinos dos atuadores configurados.");
+}
+
+/**
+ * @brief Controla o estado da Solenoide Drive
+ *
+ * @param estado true para ligar, false para desligar
+ */
+void controlar_solenoide(bool estado) {
+    digitalWrite(PINO_SOLENOIDE_DRIVE, estado ? HIGH : LOW);
+    log_info(TAG_ATUADORES, estado ? "Solenoide LIGADA" : "Solenoide DESLIGADA");
+}
+
+/**
+ * @brief Controla o estado de um relé I/O
+ * 
+ * @param pino O pino do relé (PINO_IO_R1 a PINO_IO_R4)
+ * @param estado true para ligar, false para desligar
+ */
+void controlar_io_rele(int pino, bool estado) {
+    digitalWrite(pino, estado ? HIGH : LOW);
+    String msg = "Relé no pino " + String(pino) + (estado ? " LIGADO" : " DESLIGADO");
+    log_info(TAG_ATUADORES, msg.c_str());
+}
+
+#endif // ATUADORES_H

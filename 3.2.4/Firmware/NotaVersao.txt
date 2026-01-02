@@ -1,0 +1,60 @@
+==============================================================
+Nota de Versão 3.1.7 – Controle de Catraca (ESP32-S2)/Backend
+==============================================================
+Correções
+- Timeout de espera corrigido: catraca não fica indefinidamente liberada sem giro.
+- Spam no MQTT eliminado: evento "GIRO TIMEOUT" agora é publicado apenas uma vez.
+- Leitura de quadratura ajustada: sequência 0 → 1 → 3 → 2 → 0 interpretada corretamente.
+- Conflito elétrico resolvido: removido uso de INPUT_PULLUP quando há resistores externos.
+- Mapeamento de pinos revisado: corrigida duplicação no arquivo MapeamentoPinos.h.
+Melhorias
+- Controle de sentido implementado: Entrada = passos positivos, Saída = passos negativos.
+- Anti-carona: bloqueio imediato em giros consecutivos dentro do cooldown.
+- Logs detalhados (DEBUG): estados dos sensores, passos e máquina de estados visíveis no Serial.
+- Reset automático: após timeout ou erro, sistema retorna ao estado de espera em até 2 segundos.
+- Simulador de quadratura (ESP8266): criado para testes de entrada, saída e fraude.
+Impacto
+- Maior robustez contra fraudes e erros de giro.
+- Confiabilidade aprimorada na leitura dos sensores indutivos.
+- Depuração facilitada com mensagens detalhadas.
+- Integração MQTT mais estável e sem redundância.
+
+==============================================================
+Fim da Nota de Versão 3.1.7
+==============================================================
+
+
+
+==============================================================
+Nota de Versão 3.2.x – Controle de Catraca (ESP32-S2)/Backend
+==============================================================
+
+Correções
+- Conflitos com o sensor PIR resolvidos.
+- Limpeza de lixo acumulado no sensor GMS81S durante a validação do RA lido, evitando que o mesmo RA seja validado novamente após a entrada.
+- Filtro de RA implementado: dados recebidos do sensor GMS81S passam por pré-processamento; se não forem um RA válido, não são enviados ao servidor, reduzindo a carga de processamento.
+- Correções na aplicação de cores da catraca.
+- Sistema simplificado de debug durante o boot: permite verificar o estado aproximado da catraca sem necessidade de computador conectado.
+
+Melhorias
+- Controle de horário adicionado: restrição de intervalos permitidos para entrada e possibilidade de bloqueio da catraca mesmo para usuários autorizados (útil em manutenção da catraca ou do campus).
+- Senha para comandos administrativos: necessária para modificações de configuração ou abertura da catraca, aumentando a proteção mesmo em sistemas locais.
+- Persistência de configurações no servidor: parâmetros definidos pelo administrador são mantidos após queda de energia ou reinicialização.
+- Integração entre MQTT e servidor: comunicação mais fluida e sincronizada entre os sistemas.
+
+Impacto
+- Maior segurança no acesso, com restrições de horário e senha administrativa.
+- Redução da carga no servidor graças ao filtro de RA.
+- Facilidade de manutenção com persistência de configurações e bloqueio programado.
+- Depuração simplificada no boot sem necessidade de equipamentos externos.
+- Integração mais estável entre catraca e servidor.
+
+Implementações Futuras
+- Sistema de auto diagnóstico: verificação automática do estado de cada sensor.
+- Uso de variáveis de ambiente: publicação do código no GitHub sem risco de exposição de senhas ou parâmetros confidenciais.
+
+==============================================================
+Fim da Nota de Versão 3.2.x
+==============================================================
+
+

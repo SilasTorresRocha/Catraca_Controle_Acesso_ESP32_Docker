@@ -1,0 +1,5 @@
+# Ignorar arquivo de variáveis de ambiente
+.env
+# Ignorar arquivo de configurações
+Configuracoes.h
+analisar.txt
