@@ -1,9 +1,10 @@
 // Firmware/Firmware_Controle_Acesso.ino
-// Versão 3.2.3 
+// Versão 3.3.0
 
 #include "config/MapeamentoPinos.h"
 #include "config/Configuracoes.h"
 #include "modulos/utils/Utilidades.h"
+#include "modulos/utils/AutoDiagnostico.h"
 #include "modulos/ethernet/EthernetW5500.h"
 #include "modulos/mqtt/ClienteMQTT.h"
 #include "modulos/http_client/ClienteHTTP.h"
@@ -308,6 +309,55 @@ void loop() {
 
     // 6. Atualização do giro da Catraca
     evento_giro();
+
+    // 7. Loop de Auto-Diagnóstico
+    bool sistema_ocupado = (estadoCatraca != CATRACA_AGUARDANDO) || easterEggAtivo;
+    bool erro_critico = loop_diagnostico(sistema_ocupado);
+
+    if(erro_critico){
+        //Variável de contole 
+        unsigned long ultimo_check_erro=0;
+        const long intervalo_check_erro = 1000; // 1 segundo
+        bool usandoPadrao1 = true;
+        unsigned long ultimoTrocaCor = 0;
+        log_erro(TAG_MAIN, "Erro crítico detectado! Loop travado.");
+        while (erro_critico){
+            // 1. Manutenção da Conexão Ethernet
+            if (millis() - ultimo_check_ethernet > intervalo_check_ethernet) {
+                if (!ethernet_conectado()) {
+                    log_erro(TAG_MAIN, "Ethernet desconectada. Tentando reconectar...");
+                    inicializar_ethernet(); 
+                }
+                ultimo_check_ethernet = millis();
+            }
+
+            // 2. Manutenção da Conexão MQTT
+            loop_mqtt();
+
+            //Verifica se o erro presiste
+            if (millis() - ultimo_check_erro > intervalo_check_erro) {
+                erro_critico = loop_diagnostico(false);
+                ultimo_check_erro = millis();
+            }
+
+            if (millis() - ultimoTrocaCor >= 500) {
+                ultimoTrocaCor = millis();
+                if (usandoPadrao1) { 
+                    aplicarCoresLEDs(padraoErro2);
+                } else { 
+                    aplicarCoresLEDs(padraoErro1); 
+                }
+                usandoPadrao1 = !usandoPadrao1;
+            }
+            delay(10); // Delay para evitar travamento do while
+        }
+        if(!erro_critico){
+            log_info(TAG_MAIN, "Erro crítico resolvido! Loop liberado.");
+            aplicarCoresLEDs(padraoUTF);
+            // Não estou confiando nem em mim mesmo quem dirá em usuário, que que alguem passa alguma coisa no leitor
+            if(dados_disponiveis_gm81s()) limpar_buffer_gm81s();
+        }
+    }
 
     delay(10); // Delay para evitar travamento do loop
 }

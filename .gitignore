@@ -1,6 +1,17 @@
-# Ignorar arquivo de variáveis de ambiente
+# --- Arquivos manuais com senhas ---
 .env
-# Ignorar arquivo de configurações
 Configuracoes.h
-analisar.txt
+
+# --- Arquivos temporários  ---
+__pycache__/
+*.pyc
+
+# --- Dados e Logs do Sistema gerados automaticamente ---
+mosquitto.log
+mosquitto.db
 config_acesso.json
+analisar.txt
+
+# --- Lixo ---
+.DS_Store
+Thumbs.db
