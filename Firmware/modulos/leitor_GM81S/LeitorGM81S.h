@@ -73,4 +73,35 @@ void limpar_buffer_gm81s() {
     }
 }
 
+/**
+ * @brief Envia um comando HEX para o GM81S e verifica se ele responde corretamente.
+ * Comando enviado: 7E 00 0A 01 00 00 00 30 1A
+ * Resposta esperada: 03 00 00 01 00 33 31
+ * @return true se resposta correta, false se timeout ou resposta inválida.
+ */
+bool diagnostico_gm81s() {
+    limpar_buffer_gm81s();
+    // Segundo o manual na paguina 16 do PDF ou 10 do doc 
+    byte comando[] = {0x7E, 0x00, 0x0A, 0x01, 0x00, 0x00, 0x00, 0x30, 0x1A};
+    SerialLeitor.write(comando, sizeof(comando));
+    delay(100); 
+    byte respostaEsperada[] = {0x03, 0x00, 0x00, 0x01, 0x00, 0x33, 0x31};
+    int tamanhoEsperado = sizeof(respostaEsperada);
+
+    if (SerialLeitor.available() >= tamanhoEsperado) {
+        byte resposta[tamanhoEsperado];
+        SerialLeitor.readBytes(resposta, tamanhoEsperado);
+
+        // Comparar byte a byte
+        for (int i = 0; i < tamanhoEsperado; i++) {
+            if (resposta[i] != respostaEsperada[i]) {
+                return false; // Deu ruim resposta incorreta
+            }
+        }
+        return true; // Tudo certo
+    }
+    return false; // timeout
+}
+
+
 #endif // LEITOR_GM81S_H

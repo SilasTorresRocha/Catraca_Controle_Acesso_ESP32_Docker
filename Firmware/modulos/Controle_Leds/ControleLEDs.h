@@ -88,6 +88,20 @@ Cor padraoBranco[NUM_SEGMENTOS] = {
   COR_BRANCO,
   COR_BRANCO
 };
+Cor padraoErro1[NUM_SEGMENTOS] = {
+  COR_VERMELHO,
+  COR_DESLIGADO,
+  COR_DESLIGADO,
+  COR_VERMELHO
+};
+Cor padraoErro2[NUM_SEGMENTOS] = {
+  COR_DESLIGADO,
+  COR_VERMELHO,
+  COR_VERMELHO,
+  COR_DESLIGADO
+};
+
+
 
 
 //====================IMPLEMENTAÇÃO DAS FUNÇÕES ====================//
