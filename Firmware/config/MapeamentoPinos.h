@@ -19,7 +19,7 @@
 #define PINO_INDUTOR_2 18
 
 // Sensor PIR (dataPIR)
-#define PINO_SENSOR_PIR 6
+#define PINO_SENSOR_PIR 17 // antigo 6
 
 // Sinal do Botão
 #define PINO_SINAL_BOTAO 15

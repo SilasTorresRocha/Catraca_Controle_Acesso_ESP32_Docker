@@ -18,7 +18,13 @@ configuracao_atual = {
     "bloqueio_total": False,  # Controle de lockdown (Aplica apenas para entrada, a saída sempre permitida)
     "restricao_ativa": False, # Inicialmente desativada
     "horario_inicio": 7,
-    "horario_fim": 22
+    "horario_fim": 22,
+    # Config padrão de Reinício 
+    "reinicio_agendado": {
+        "ativo": True,          # Padrão: Ativo
+        "hora_base": 3,         # 3 da manhã
+        "ruido_minutos": 90     # +/- 90 minutos de aleatoriedade
+    }
 }
 
 def carregar_ras_validos():

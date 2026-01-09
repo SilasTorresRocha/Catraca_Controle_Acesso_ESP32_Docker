@@ -14,7 +14,7 @@
 // ================== CONFIGURAÇÕES DE TEMPO (EM MS) ==================
 
 // Intervalo para enviar o relatório completo via MQTT  
-const unsigned long INTERVALO_RELATORIO_MQTT = 600000; // 10 minutos
+const unsigned long INTERVALO_RELATORIO_MQTT = 60000; // 10 minutos // vou mudar para 1 minuto para testes
 
 // Tempo máximo que o BOTÃO pode ficar pressionado antes de ser erro 
 const unsigned long TIMEOUT_BOTAO_TRAVADO = 60000; // 60s
