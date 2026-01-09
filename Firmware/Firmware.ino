@@ -47,7 +47,14 @@ void callback_comando_mqtt(char* topico, byte* payload, unsigned int length) {
             publicar_mqtt(TOPICO_PUBLISH_EVENTO, "SOLENOIDE_ABERTA_COMANDO");
         } else if (strcmp(payload_str, "STATUS") == 0) {
             publicar_mqtt(TOPICO_PUBLISH_STATUS, "Online e OK");
+        }else if (strcmp(payload_str, "REINICIAR") == 0) {
+            log_info(TAG_MAIN, "Comando de REINICIO recebido via MQTT.");
+            publicar_mqtt(TOPICO_PUBLISH_EVENTO, "SISTEMA_REINICIANDO_AGENDADO");
+            aplicarCoresLEDs(padraoBranco); 
+            delay(1000); // Dá tempo do MQTT enviar a mensagem
+            ESP.restart(); 
         }
+
     }
 }
 
@@ -154,6 +161,9 @@ void setup() {
     
     log_info(TAG_MAIN, "Setup concluído.");
     aplicarCoresLEDs(padraoUTF);
+    //
+    if(dados_disponiveis_gm81s()) limpar_buffer_gm81s();
+
 }
 
 // --- Loop ---
@@ -357,6 +367,12 @@ void loop() {
             // Não estou confiando nem em mim mesmo quem dirá em usuário, que que alguem passa alguma coisa no leitor
             if(dados_disponiveis_gm81s()) limpar_buffer_gm81s();
         }
+    }
+    // Se o uptime passar de 24 horas (em ms), reinicia, como uso bastate string acaba desfragmentando a memoria,eu acho, para ganratir , reinicia(e bem rapido) 
+    if (millis() > 86400000UL) { 
+        log_info(TAG_MAIN, "Reinício preventivo de 24h...");
+        delay(1000);
+        ESP.restart();
     }
 
     delay(10); // Delay para evitar travamento do loop

@@ -24,7 +24,6 @@ Fim da Nota de Versão 3.1.7
 ==============================================================
 
 
-
 ==============================================================
 Nota de Versão 3.2.x – Controle de Catraca (ESP32-S2)/Backend
 ==============================================================
@@ -56,5 +55,29 @@ Implementações Futuras
 ==============================================================
 Fim da Nota de Versão 3.2.x
 ==============================================================
+
+==============================================================
+Nota de Versão 3.3.X – Firmware/Backend
+==============================================================
+
+Modificação
+- Alteração de GPIO do sensor PIR: mapeamento atualizado para funcionamento correto.
+
+Melhorias
+- Módulo de auto diagnóstico adicionado: permite verificação interna do sistema.
+- Uso de variáveis de ambiente implementado: facilita configuração e personalização no firmware.
+- Arquivo .h exemplo desenvolvido: fornece modelo para preenchimento de campos necessários e ajustes pessoais.
+- Sistema de reinicialização automática implementado: inclui ruído de tempo para evitar reinícios sempre no mesmo horário (Backend).
+
+Impacto
+- Maior flexibilidade na configuração do firmware.
+- Robustez aprimorada com auto diagnóstico e reinicialização automática.
+- Facilidade para desenvolvedores com arquivo de exemplo .h.
+- Confiabilidade aumentada no uso do sensor PIR.
+
+==============================================================
+Fim da Nota de Versão 3.3.X
+==============================================================
+
 
 
