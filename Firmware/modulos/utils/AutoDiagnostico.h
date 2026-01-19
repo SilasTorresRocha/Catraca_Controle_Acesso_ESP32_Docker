@@ -99,8 +99,8 @@ bool loop_diagnostico(bool sistema_ocupado) {
     // Botão de Saída, tem pull up
     bool botao_erro = verificar_travamento(PINO_SINAL_BOTAO, LOW, inicio_travamento_botao, TIMEOUT_BOTAO_TRAVADO, "BOTAO_SAIDA");
     // Indutores, ja que quando está detectando metal fica em LOW, pela logica do meu conversor de nivel logico
-    bool ind1_erro = verificar_travamento(PINO_INDUTOR_1, LOW, inicio_travamento_indutor, TIMEOUT_INDUTOR_TRAVADO, "INDUTOR_1");
-    bool ind2_erro = verificar_travamento(PINO_INDUTOR_2, LOW, inicio_travamento_indutor2, TIMEOUT_INDUTOR_TRAVADO, "INDUTOR_2");
+    bool ind1_erro = verificar_travamento(PINO_INDUTOR_1, HIGH, inicio_travamento_indutor, TIMEOUT_INDUTOR_TRAVADO, "INDUTOR_1");
+    bool ind2_erro = verificar_travamento(PINO_INDUTOR_2, HIGH, inicio_travamento_indutor2, TIMEOUT_INDUTOR_TRAVADO, "INDUTOR_2");
     // PIR 
     bool pir_erro = verificar_travamento(PINO_SENSOR_PIR, HIGH, inicio_travamento_pir, TIMEOUT_PIR_TRAVADO, "PIR");
 

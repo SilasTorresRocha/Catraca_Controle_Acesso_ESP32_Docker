@@ -1,4 +1,4 @@
-// Firmware_Controle_Acesso/config/Configuracoes.h
+// Firmware/config/Configuracoes.h
 
 #ifndef CONFIGURACOES_H
 #define CONFIGURACOES_H

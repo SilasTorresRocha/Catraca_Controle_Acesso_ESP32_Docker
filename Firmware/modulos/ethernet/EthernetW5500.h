@@ -1,4 +1,4 @@
-// Firmware_Controle_Acesso/modulos/ethernet/EthernetW5500.h
+// Firmware/modulos/ethernet/EthernetW5500.h
 
 #ifndef ETHERNET_W5500_H
 #define ETHERNET_W5500_H

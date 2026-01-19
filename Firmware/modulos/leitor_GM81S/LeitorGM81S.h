@@ -1,4 +1,4 @@
-// Firmware_Controle_Acesso/modulos/leitor_GM81S/LeitorGM81S.h
+// Firmware/modulos/leitor_GM81S/LeitorGM81S.h
 /*
    LeitorGM81S.h - Biblioteca para comunicação com o leitor de cartão GM81S via UART.
    Criado por: Silas Torres Rocha, 24/10/2025

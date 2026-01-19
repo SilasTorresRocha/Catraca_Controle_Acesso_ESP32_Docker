@@ -16,7 +16,7 @@ const unsigned long TIMEOUT_EASTER_EGG = 50000; // 50 segundos
 unsigned long tempo_inicio_egg = 0;
 bool modo_easter_egg_ativo = false;
 
-// Estado da brincadeira Genshin (0 a 3 controla quantos segmentos pintar)
+// Estado da brincadeira (0 a 3 controla quantos segmentos pintar)
 int estagio_genshin = 0; 
 Cor coresAtuaisGenshin[NUM_SEGMENTOS]; 
 
@@ -34,14 +34,14 @@ bool easter_egg(String codigo) {
 
     // -- Easter Egg Dev kkkk ---
     if (texto == "silas torres rocha") {
-        log_info(TAG_EGG, "Modo DEV !");
+        log_info(TAG_EGG, "Modo DEV ?");
         Cor padraoAzul[4] = {COR_AZUL, COR_AZUL, COR_AZUL, COR_AZUL};
         piscarLEDs(padraoAzul, 5, 200);
         aplicarCoresLEDs(padraoUTF); 
         return true; 
     }
     if (texto.indexOf("silas") != -1 || texto.indexOf("torre") != -1 || texto.indexOf("rocha") != -1) {
-        log_info(TAG_EGG, "Modo DEV !");
+        log_info(TAG_EGG, "Modo DEV ?");
         Cor padraoAzul[4] = {COR_AZUL, COR_AZUL, COR_AZUL, COR_AZUL};
         piscarLEDs(padraoAzul, 2, 300);
         aplicarCoresLEDs(padraoUTF); 
@@ -81,12 +81,14 @@ bool easter_egg(String codigo) {
     // Columbina
     else if (texto == "columbina" || texto == "nodkrai" || texto == "nod krai") {
         corEscolhida = COR_Columbina; eGenshin = true;
+
+    }else if (texto == "genshin" || texto == "impact" || texto == "genshin impact") {
+        corEscolhida = COR_Columbina; eGenshin = true;
     }
 
     // Lógica Genshin
     if (eGenshin) {
         log_info(TAG_EGG, ("Genshin detectado: " + texto).c_str());
-        
         // Se a brincadeira não estava ativa, prepara o array base
         if (!modo_easter_egg_ativo) {
              for(int i=0; i<NUM_SEGMENTOS; i++) coresAtuaisGenshin[i] = padraoUTF[i];

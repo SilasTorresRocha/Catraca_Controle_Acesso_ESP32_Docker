@@ -1,4 +1,4 @@
-// Firmware_Controle_Acesso/modulos/nvs_config/NVSConfig.h
+// Firmware/modulos/nvs_config/NVSConfig.h
 
 #ifndef NVS_CONFIG_H
 #define NVS_CONFIG_H
