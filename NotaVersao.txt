@@ -57,7 +57,7 @@ Fim da Nota de Versão 3.2.x
 ==============================================================
 
 ==============================================================
-Nota de Versão 3.3.X – Firmware/Backend
+Nota de Versão 3.3.0 – Firmware/Backend
 ==============================================================
 
 Modificação
@@ -76,8 +76,27 @@ Impacto
 - Confiabilidade aumentada no uso do sensor PIR.
 
 ==============================================================
-Fim da Nota de Versão 3.3.X
+Fim da Nota de Versão 3.3.0
 ==============================================================
 
+==============================================================
+Nota de Versão 3.3.1 – Firmware/Backend
+==============================================================
+
+Modificações
+- Inversão de lógica para travado indutivo: valores ajustados para versão definitiva, garantindo funcionamento real do sistema.
+
+Melhorias
+- Adição de cores para indicar ausência de internet e falha no MQTT: facilita identificação visual rápida desses erros.
+- Publicação automática de status "Online" ao iniciar: inclui feedback do servidor para confirmar quando o sistema está ativo.
+
+Impacto
+- Maior clareza na detecção de falhas de comunicação (internet/MQTT).
+- Confiabilidade aprimorada com confirmação de status online via servidor.
+- Funcionamento correto dos indutivos conforme lógica real do conversor de nível.
+
+==============================================================
+Fim da Nota de Versão 3.3.1
+==============================================================
 
 

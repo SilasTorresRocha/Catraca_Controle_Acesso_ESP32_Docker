@@ -1,4 +1,4 @@
-// Firmware_Controle_Acesso/config/MapeamentoPinos.h
+// Firmware/config/MapeamentoPinos.h
 
 #ifndef MAPEAMENTO_PINOS_H
 #define MAPEAMENTO_PINOS_H

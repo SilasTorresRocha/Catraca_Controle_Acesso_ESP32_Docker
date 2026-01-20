@@ -119,7 +119,12 @@ void loop_mqtt() {
     }
     
     if (!mqtt_cliente.connected()) {
+        aplicarCoresLEDs(padraoSemMQTT);
         reconectar_mqtt();
+        if(mqtt_cliente.connected()){
+            aplicarCoresLEDs(padraoUTF);
+            publicar_mqtt(TOPICO_PUBLISH_STATUS, "Reconectado e Online");
+        }
     }
     
     mqtt_cliente.loop();

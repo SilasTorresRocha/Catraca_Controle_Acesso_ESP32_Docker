@@ -1,4 +1,4 @@
-// Firmware/Firmware_Controle_Acesso.ino
+// Firmware/Firmware.ino
 // Versão 3.3.0
 
 #include "config/MapeamentoPinos.h"
@@ -161,6 +161,7 @@ void setup() {
     
     log_info(TAG_MAIN, "Setup concluído.");
     aplicarCoresLEDs(padraoUTF);
+    publicar_mqtt(TOPICO_PUBLISH_STATUS, "====== Sistema Online ======");
     //
     if(dados_disponiveis_gm81s()) limpar_buffer_gm81s();
 
@@ -173,7 +174,9 @@ void loop() {
     if (millis() - ultimo_check_ethernet > intervalo_check_ethernet) {
         if (!ethernet_conectado()) {
             log_erro(TAG_MAIN, "Ethernet desconectada. Tentando reconectar...");
+            aplicarCoresLEDs(padraoSemIP);
             inicializar_ethernet(); 
+            if (ethernet_conectado()) aplicarCoresLEDs(padraoUTF);
         }
         ultimo_check_ethernet = millis();
     }
@@ -336,7 +339,9 @@ void loop() {
             if (millis() - ultimo_check_ethernet > intervalo_check_ethernet) {
                 if (!ethernet_conectado()) {
                     log_erro(TAG_MAIN, "Ethernet desconectada. Tentando reconectar...");
+                    aplicarCoresLEDs(padraoSemIP);
                     inicializar_ethernet(); 
+                    if (ethernet_conectado()) aplicarCoresLEDs(padraoUTF);
                 }
                 ultimo_check_ethernet = millis();
             }
@@ -368,9 +373,9 @@ void loop() {
             if(dados_disponiveis_gm81s()) limpar_buffer_gm81s();
         }
     }
-    // Se o uptime passar de 24 horas (em ms), reinicia, como uso bastate string acaba desfragmentando a memoria,eu acho, para ganratir , reinicia(e bem rapido) 
-    if (millis() > 86400000UL) { 
-        log_info(TAG_MAIN, "Reinício preventivo de 24h...");
+    // Se o uptime passar de 24 horas, reinicia, como uso bastate string acaba desfragmentando a memoria, para ganratir , reinicia(e bem rapido) 
+    if (millis() > 93600000UL) { 
+        log_info(TAG_MAIN, "Reinício preventivo de 24h...");// Se bem que tenho ruido de 90 minutos então tem que ser 26h(eu sei que seria 25,5h mas vai 26) em ms fica 93600000
         delay(1000);
         ESP.restart();
     }
