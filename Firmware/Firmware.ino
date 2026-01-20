@@ -161,6 +161,7 @@ void setup() {
     
     log_info(TAG_MAIN, "Setup concluído.");
     aplicarCoresLEDs(padraoUTF);
+    publicar_mqtt(TOPICO_PUBLISH_STATUS, "====== Sistema Online ======");
     //
     if(dados_disponiveis_gm81s()) limpar_buffer_gm81s();
 
@@ -173,7 +174,9 @@ void loop() {
     if (millis() - ultimo_check_ethernet > intervalo_check_ethernet) {
         if (!ethernet_conectado()) {
             log_erro(TAG_MAIN, "Ethernet desconectada. Tentando reconectar...");
+            aplicarCoresLEDs(padraoSemIP);
             inicializar_ethernet(); 
+            if (ethernet_conectado()) aplicarCoresLEDs(padraoUTF);
         }
         ultimo_check_ethernet = millis();
     }
@@ -336,7 +339,9 @@ void loop() {
             if (millis() - ultimo_check_ethernet > intervalo_check_ethernet) {
                 if (!ethernet_conectado()) {
                     log_erro(TAG_MAIN, "Ethernet desconectada. Tentando reconectar...");
+                    aplicarCoresLEDs(padraoSemIP);
                     inicializar_ethernet(); 
+                    if (ethernet_conectado()) aplicarCoresLEDs(padraoUTF);
                 }
                 ultimo_check_ethernet = millis();
             }
