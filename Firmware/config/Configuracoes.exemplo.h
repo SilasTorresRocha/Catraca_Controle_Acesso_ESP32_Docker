@@ -51,7 +51,7 @@ byte MAC_ENDERECO[] = { 0x00, 0x11, 0x22, 0x33, 0x44, 0x55 };                  /
 #define GM81S_BAUD_RATE 9600   // Velocidade configurada no GM81S
 
 // --- Outras Configurações ---
-#define TEMPO_TIMEOUT_HTTP 5000 // Timeout para requisições HTTP em milissegundos
+#define TEMPO_TIMEOUT_HTTP 15000 // Timeout para requisições HTTP em milissegundos
 
 // Configurações da quantidade de segmentos LED RGB
 #define NUM_SEGMENTOS 4  
