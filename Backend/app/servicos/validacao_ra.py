@@ -2,16 +2,15 @@
 
 import os
 import json
+import subprocess
+import sys
 from datetime import datetime
-from typing import Set
-from datetime import time
 
 # Caminhos de arquivos
 DIRETORIO_ATUAL = os.path.dirname(__file__)
-ARQUIVO_RA_VALIDOS = os.path.join(DIRETORIO_ATUAL, "../recursos/ra_validos.txt")
 ARQUIVO_CONFIG = os.path.join(DIRETORIO_ATUAL, "../recursos/config_acesso.json")
+CONSULTA_SCRIPT = os.path.abspath(os.path.join(DIRETORIO_ATUAL, "../recursos/consulta.py"))
 
-RAS_VALIDOS = set()
 
 # Configuração Padrão (caso o arquivo não exista)
 configuracao_atual = {
@@ -26,18 +25,6 @@ configuracao_atual = {
         "ruido_minutos": 90     # +/- 90 minutos de aleatoriedade
     }
 }
-
-def carregar_ras_validos():
-    """Carrega RAs do arquivo txt"""
-    global RAS_VALIDOS
-    RAS_VALIDOS = set()
-    try:
-        if os.path.exists(ARQUIVO_RA_VALIDOS):
-            with open(ARQUIVO_RA_VALIDOS, 'r') as f:
-                RAS_VALIDOS = {linha.strip() for linha in f if linha.strip()}
-        print(f"[SERVICO] {len(RAS_VALIDOS)} RAs carregados.")
-    except Exception as e:
-        print(f"[ERRO] Falha ao carregar RAs: {e}")
 
 def carregar_configuracao():
     """Carrega configurações de horário do JSON (Persistência)"""
@@ -64,8 +51,35 @@ def salvar_configuracao():
     except Exception as e:
         print(f"[ERRO] Não foi possível salvar config: {e}")
 
-# Inicialização
-carregar_ras_validos()
+
+# ==== Integração com o script externo de consulta ====
+
+def consultar_ra_externo(ra: str, timeout: int = 10) -> bool:
+    """
+    Executa o script Python externo para validar o RA.
+    Retorna True se o RA for válido (código > 0).
+    """
+    ra = str(int(ra)) # Garante que é um número válido sem zeros à esquerda (assim no cracha tem um 0 sei la pq motivo mas no banco nao tem entao ... conveter para inteiro e volta para string)
+    try:
+        cmd = [sys.executable, CONSULTA_SCRIPT, ra]
+        resultado = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        saida = resultado.stdout.strip()
+        if not saida:
+            return False
+        # o script retorna um número >0 quando encontra o RA
+        try:
+            codigo = int(saida.split()[0])
+            return codigo != 0
+        except Exception:
+            return False
+    except subprocess.TimeoutExpired:
+        print(f"[ERRO] Timeout na consulta do RA {ra}")
+        return False
+    except Exception as e:
+        print(f"[ERRO] Falha na consulta externa: {e}")
+        return False
+
+# Inicialização ( Apenas carrega os dados) (Acho que esse codigo tem muito coisa que nao e validar ra kkkkkk)
 carregar_configuracao()
 
 def validar_ra(ra: str) -> dict:
@@ -75,12 +89,12 @@ def validar_ra(ra: str) -> dict:
         return {"valido": False, "motivo": "Acesso BLOQUEADO TEMPORARIAMENTE "}
     
     #Verifica RA
-    if ra not in RAS_VALIDOS:
+    if not consultar_ra_externo(ra):
         return {"valido": False, "motivo": "RA nao encontrado"}
 
     # Verifica Horário, usando a config carregada
     if configuracao_atual["restricao_ativa"]:
-        hora_agora = datetime.now().hour
+        hora_agora = datetime.now().hour       #Se algum momento estiver dando inconsistencia de horario, olha o docker, ajsutei o fuso horario la
         inicio = configuracao_atual["horario_inicio"]
         fim = configuracao_atual["horario_fim"]
         

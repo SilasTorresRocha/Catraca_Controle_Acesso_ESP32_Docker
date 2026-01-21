@@ -4,3 +4,4 @@ pydantic
 paho-mqtt
 aiofiles
 jinja2
+python3-ldap
