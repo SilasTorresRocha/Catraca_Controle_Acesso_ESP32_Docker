@@ -73,7 +73,7 @@ uint8_t lerAB() {
 // -------------------- ISR --------------------
 void IRAM_ATTR isr_indutores() {
     uint32_t agora = (uint32_t)(esp_timer_get_time() / 1000ULL);
-    if ((agora - ultimoISRTime) < DEBOUNCE_MS) return;
+    //if ((agora - ultimoISRTime) < DEBOUNCE_MS) return; //Caso queira simular usando botoes
     ultimoISRTime = agora;
     houveMudancaSensor = true;
 }

@@ -135,7 +135,6 @@ void setup() {
     // 0. Inicializa o Controle de LEDs
     setupControleLEDs();
     aplicarCoresLEDs(padraoSetup);
-
     // 1. Inicializa a comunicação serial para logs
     delay(5000);
     inicializar_serial();

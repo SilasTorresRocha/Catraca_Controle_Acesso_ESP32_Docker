@@ -83,12 +83,12 @@ bool easter_egg(String codigo) {
         corEscolhida = COR_Columbina; eGenshin = true;
 
     }else if (texto == "genshin" || texto == "impact" || texto == "genshin impact") {
-        corEscolhida = COR_Columbina; eGenshin = true;
+        corEscolhida = COR_branco; eGenshin = true;
     }
 
     // Lógica Genshin
     if (eGenshin) {
-        log_info(TAG_EGG, ("Genshin detectado: " + texto).c_str());
+        log_info(TAG_EGG, ("Easter Egg detectado: " + texto).c_str());
         // Se a brincadeira não estava ativa, prepara o array base
         if (!modo_easter_egg_ativo) {
              for(int i=0; i<NUM_SEGMENTOS; i++) coresAtuaisGenshin[i] = padraoUTF[i];

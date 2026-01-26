@@ -9,6 +9,7 @@
 #include "../../config/Configuracoes.h"
 #include "../utils/Utilidades.h"
 #include "../ethernet/EthernetW5500.h" // Para verificar a conexão Ethernet
+#include "../Controle_Leds/ControleLEDs.h"
 
 #define TAG_MQTT "MQTT"
 
