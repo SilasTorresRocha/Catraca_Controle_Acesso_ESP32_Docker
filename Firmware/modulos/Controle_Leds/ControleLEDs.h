@@ -75,6 +75,13 @@ Cor padraoAmarelo[NUM_SEGMENTOS] = {
   COR_AMARELO
 };
 
+Cor padraoAzul[NUM_SEGMENTOS] = {
+  COR_AZUL,
+  COR_AZUL,
+  COR_AZUL,
+  COR_AZUL
+};
+
 Cor padraoSetup[NUM_SEGMENTOS] = {
   COR_AZUL,
   COR_VERDE,
