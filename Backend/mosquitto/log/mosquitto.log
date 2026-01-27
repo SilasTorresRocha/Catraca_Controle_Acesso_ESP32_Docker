@@ -520,3 +520,60 @@
 1768963656: mosquitto version 2.0.22 running
 1768963657: New connection from 172.20.0.2:46837 on port 1883.
 1768963657: New client connected from 172.20.0.2:46837 as auto-5BB0D990-89B8-3EF1-BCB4-0789E6C00AD2 (p2, c1, k60).
+1768965457: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768965661: New connection from 172.20.0.1:52018 on port 1883.
+1768965661: New client connected from 172.20.0.1:52018 as ESP32_Controle_Acesso (p2, c1, k15).
+1768965714: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1768965718: New connection from 172.20.0.1:49510 on port 1883.
+1768965718: New client connected from 172.20.0.1:49510 as ESP32_Controle_Acesso (p2, c1, k15).
+1768966011: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1768966017: New connection from 172.20.0.1:39018 on port 1883.
+1768966017: New client connected from 172.20.0.1:39018 as ESP32_Controle_Acesso (p2, c1, k15).
+1768966116: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1768966120: New connection from 172.20.0.1:51032 on port 1883.
+1768966120: New client connected from 172.20.0.1:51032 as ESP32_Controle_Acesso (p2, c1, k15).
+1768966174: Client ESP32_Controle_Acesso closed its connection.
+1768966175: New connection from 172.20.0.1:52452 on port 1883.
+1768966175: New client connected from 172.20.0.1:52452 as ESP32_Controle_Acesso (p2, c1, k15).
+1768966369: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1768967258: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1768969058: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769000818: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769021564: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769030615: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769032416: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769034217: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769035943: New connection from 172.20.0.1:55220 on port 1883.
+1769035943: New client connected from 172.20.0.1:55220 as ESP32_Controle_Acesso (p2, c1, k15).
+1769035966: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769036003: New connection from 172.20.0.1:52454 on port 1883.
+1769036003: New client connected from 172.20.0.1:52454 as ESP32_Controle_Acesso (p2, c1, k15).
+1769036018: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769036026: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769036041: New connection from 172.20.0.1:59988 on port 1883.
+1769036041: New client connected from 172.20.0.1:59988 as ESP32_Controle_Acesso (p2, c1, k15).
+1769036064: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769036182: New connection from 172.20.0.1:39680 on port 1883.
+1769036182: New client connected from 172.20.0.1:39680 as ESP32_Controle_Acesso (p2, c1, k15).
+1769036253: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769037819: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769039620: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769046017: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769093931: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769119790: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769121488: mosquitto version 2.0.22 terminating
+1769121488: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769516271: mosquitto version 2.0.22 starting
+1769516271: Config loaded from /mosquitto/config/mosquitto.conf.
+1769516271: Opening ipv4 listen socket on port 1883.
+1769516271: Opening ipv6 listen socket on port 1883.
+1769516271: Opening websockets listen socket on port 9001.
+1769516271: mosquitto version 2.0.22 running
+1769516271: New connection from 172.18.0.1:57722 on port 1883.
+1769516271: New client connected from 172.18.0.1:57722 as ESP32_Controle_Acesso (p2, c1, k15).
+1769516272: New connection from 172.18.0.3:56793 on port 1883.
+1769516272: New client connected from 172.18.0.3:56793 as auto-97E19784-55D8-E1B3-183C-547B01A65A64 (p2, c1, k60).
+1769516332: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769526671: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769532934: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769552823: Saving in-memory database to /mosquitto/data//mosquitto.db.
