@@ -15,7 +15,7 @@ import random
 app = FastAPI(
     title="Servidor de Controle de Acesso Catraca",
     description="Backend para validação de RAs e controle de acesso. Com integração com MQTT.",
-    version="3.4.0"
+    version="3.4.1"
 )
 
 app.mount("/static", StaticFiles(directory="app/static"), name="static")

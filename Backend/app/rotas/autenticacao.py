@@ -31,7 +31,7 @@ class ConfigEstado(BaseModel):
 async def rota_validar_ra(item: ItemValidacaoRA):
     resultado = validar_ra(item.ra)
     # Mantém compatibilidade com o ESP32 retornando booleanos e strings simples
-    return {"mensagem": resultado["motivo"], "acesso_permitido": resultado["valido"]}
+    return {"mensagem": resultado["motivo"], "acesso_permitido": resultado["valido"], "RA": resultado.get("RA", item.ra)}
 
 
 

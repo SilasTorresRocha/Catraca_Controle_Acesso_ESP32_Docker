@@ -11,13 +11,14 @@ PORT = int(os.getenv("MQTT_PORT", 1883))
 TOPICO_EVENTOS = "controle_acesso/evento"
 TOPICO_COMANDO = "controle_acesso/comando"
 TOPICO_DIAGNOSTICO = "controle_acesso/diagnostico" 
+TOPICO_STATUS = "controle_acesso/status"
 
 client = mqtt.Client()
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
         print("[MQTT] Conectado ao Broker!")
-        client.subscribe([(TOPICO_EVENTOS, 0), (TOPICO_DIAGNOSTICO, 0)])
+        client.subscribe([(TOPICO_EVENTOS, 0), (TOPICO_DIAGNOSTICO, 0), (TOPICO_STATUS, 0)])
         print(f"[MQTT] Inscrito em: {TOPICO_EVENTOS} e {TOPICO_DIAGNOSTICO}")
     else:
         print(f"[MQTT] Falha na conexão. Código: {rc}")

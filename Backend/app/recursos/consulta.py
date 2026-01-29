@@ -43,5 +43,22 @@ def main():
     else:
         print(0)
 
+
+
+
+
+
+
+#---------------------Funcao para integrar com o codigo---------------------#]
+def verificar_ra(ra: str) -> bool:
+    """
+    Entrada: RA (str)
+    Saída: True se válido, False se inválido
+    """
+    if not ra or not ra.strip():
+        print("[ERRO] RA vazio ou nulo.")
+        return False
+    return random.randint(0, 1)
+
 if __name__ == "__main__":
     main()

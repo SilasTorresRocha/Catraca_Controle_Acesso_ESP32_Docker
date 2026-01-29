@@ -577,3 +577,281 @@
 1769526671: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1769532934: Saving in-memory database to /mosquitto/data//mosquitto.db.
 1769552823: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769554624: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769559268: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769561068: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769562869: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769570073: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769609709: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769611510: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769617967: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769624637: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769626438: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769627072: mosquitto version 2.0.22 terminating
+1769627072: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769627103: mosquitto version 2.0.22 starting
+1769627103: Config loaded from /mosquitto/config/mosquitto.conf.
+1769627103: Opening ipv4 listen socket on port 1883.
+1769627103: Opening ipv6 listen socket on port 1883.
+1769627103: Opening websockets listen socket on port 9001.
+1769627103: mosquitto version 2.0.22 running
+1769627104: New connection from 172.18.0.2:46839 on port 1883.
+1769627104: New client connected from 172.18.0.2:46839 as auto-2F9980E4-96D7-A018-A9FA-31D3FF4CC664 (p2, c1, k60).
+1769627621: mosquitto version 2.0.22 terminating
+1769627621: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769627632: mosquitto version 2.0.22 starting
+1769627632: Config loaded from /mosquitto/config/mosquitto.conf.
+1769627632: Opening ipv4 listen socket on port 1883.
+1769627632: Opening ipv6 listen socket on port 1883.
+1769627632: Opening websockets listen socket on port 9001.
+1769627632: mosquitto version 2.0.22 running
+1769627633: New connection from 172.18.0.2:41651 on port 1883.
+1769627633: New client connected from 172.18.0.2:41651 as auto-E19F3A84-36EC-3AEA-124D-942CF1198869 (p2, c1, k60).
+1769627977: mosquitto version 2.0.22 terminating
+1769627977: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769627995: mosquitto version 2.0.22 starting
+1769627995: Config loaded from /mosquitto/config/mosquitto.conf.
+1769627995: Opening ipv4 listen socket on port 1883.
+1769627995: Opening ipv6 listen socket on port 1883.
+1769627995: Opening websockets listen socket on port 9001.
+1769627995: mosquitto version 2.0.22 running
+1769627997: New connection from 172.18.0.2:45825 on port 1883.
+1769627997: New client connected from 172.18.0.2:45825 as auto-1CAD1D43-2A91-6895-9682-C12F1C2776E2 (p2, c1, k60).
+1769628220: mosquitto version 2.0.22 terminating
+1769628220: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769628229: mosquitto version 2.0.22 starting
+1769628229: Config loaded from /mosquitto/config/mosquitto.conf.
+1769628229: Opening ipv4 listen socket on port 1883.
+1769628229: Opening ipv6 listen socket on port 1883.
+1769628229: Opening websockets listen socket on port 9001.
+1769628229: mosquitto version 2.0.22 running
+1769628231: New connection from 172.18.0.2:50779 on port 1883.
+1769628231: New client connected from 172.18.0.2:50779 as auto-BC644649-FADC-05A0-499F-E526F69F803A (p2, c1, k60).
+1769628457: mosquitto version 2.0.22 terminating
+1769628457: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769636103: mosquitto version 2.0.22 starting
+1769636103: Config loaded from /mosquitto/config/mosquitto.conf.
+1769636103: Opening ipv4 listen socket on port 1883.
+1769636103: Opening ipv6 listen socket on port 1883.
+1769636103: Opening websockets listen socket on port 9001.
+1769636103: mosquitto version 2.0.22 running
+1769636125: New connection from 172.18.0.3:35085 on port 1883.
+1769636125: New client connected from 172.18.0.3:35085 as auto-D0020D12-2238-C7C5-E5B9-0DFB4617B3CC (p2, c1, k60).
+1769637903: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769639704: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769641505: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769642496: New connection from 172.18.0.1:40362 on port 1883.
+1769642496: New client connected from 172.18.0.1:40362 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642534: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769642542: New connection from 172.18.0.1:51520 on port 1883.
+1769642542: New client connected from 172.18.0.1:51520 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642565: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769642587: New connection from 172.18.0.1:41188 on port 1883.
+1769642587: New client connected from 172.18.0.1:41188 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642600: Client ESP32_Controle_Acesso closed its connection.
+1769642600: New connection from 172.18.0.1:33884 on port 1883.
+1769642600: New client connected from 172.18.0.1:33884 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642638: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769642638: New connection from 172.18.0.1:36558 on port 1883.
+1769642638: New client connected from 172.18.0.1:36558 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642661: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769642716: New connection from 172.18.0.1:49112 on port 1883.
+1769642716: New client connected from 172.18.0.1:49112 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642739: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769642843: New connection from 172.18.0.1:51542 on port 1883.
+1769642843: New client connected from 172.18.0.1:51542 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642861: Client ESP32_Controle_Acesso closed its connection.
+1769642861: New connection from 172.18.0.1:39566 on port 1883.
+1769642861: New client connected from 172.18.0.1:39566 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642913: New connection from 172.18.0.1:50398 on port 1883.
+1769642913: Client ESP32_Controle_Acesso already connected, closing old connection.
+1769642913: New client connected from 172.18.0.1:50398 as ESP32_Controle_Acesso (p2, c1, k15).
+1769642940: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769643239: New connection from 172.18.0.1:40258 on port 1883.
+1769643239: New client connected from 172.18.0.1:40258 as ESP32_Controle_Acesso (p2, c1, k15).
+1769643306: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769643368: Client ESP32_Controle_Acesso closed its connection.
+1769643368: New connection from 172.18.0.1:50478 on port 1883.
+1769643368: New client connected from 172.18.0.1:50478 as ESP32_Controle_Acesso (p2, c1, k15).
+1769643599: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769643739: Client auto-D0020D12-2238-C7C5-E5B9-0DFB4617B3CC closed its connection.
+1769643751: New connection from 172.18.0.3:51531 on port 1883.
+1769643751: New client connected from 172.18.0.3:51531 as auto-BF515EF8-DF58-D42E-FB54-2BE27EB3E5D2 (p2, c1, k60).
+1769643751: Client auto-BF515EF8-DF58-D42E-FB54-2BE27EB3E5D2 closed its connection.
+1769643752: mosquitto version 2.0.22 terminating
+1769643752: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769643799: mosquitto version 2.0.22 starting
+1769643799: Config loaded from /mosquitto/config/mosquitto.conf.
+1769643799: Opening ipv4 listen socket on port 1883.
+1769643799: Opening ipv6 listen socket on port 1883.
+1769643799: Opening websockets listen socket on port 9001.
+1769643799: mosquitto version 2.0.22 running
+1769643807: New connection from 172.18.0.3:48763 on port 1883.
+1769643807: New client connected from 172.18.0.3:48763 as auto-7E79FE4E-6FFB-08B5-9218-0424791E990C (p2, c1, k60).
+1769643846: New connection from 172.18.0.1:45222 on port 1883.
+1769643846: New client connected from 172.18.0.1:45222 as ESP32_Controle_Acesso (p2, c1, k15).
+1769643950: Client ESP32_Controle_Acesso has exceeded timeout, disconnecting.
+1769644304: New connection from 172.18.0.1:50134 on port 1883.
+1769644304: Client <unknown> disconnected due to protocol error.
+1769644304: New connection from 172.18.0.1:50140 on port 1883.
+1769644304: Client <unknown> disconnected due to protocol error.
+1769644304: New connection from 172.18.0.1:50150 on port 1883.
+1769644304: Client <unknown> disconnected due to protocol error.
+1769644325: New connection from 172.18.0.1:40058 on port 1883.
+1769644325: Client <unknown> disconnected due to protocol error.
+1769644325: New connection from 172.18.0.1:40074 on port 1883.
+1769644325: Client <unknown> disconnected due to protocol error.
+1769644325: New connection from 172.18.0.1:40082 on port 1883.
+1769644325: Client <unknown> disconnected due to protocol error.
+1769644335: New connection from 172.18.0.1:60660 on port 1883.
+1769644335: Client <unknown> disconnected due to protocol error.
+1769644335: New connection from 172.18.0.1:60666 on port 1883.
+1769644335: Client <unknown> disconnected due to protocol error.
+1769644335: New connection from 172.18.0.1:60674 on port 1883.
+1769644335: Client <unknown> disconnected due to protocol error.
+1769644343: New connection from 172.18.0.1:46478 on port 1883.
+1769644343: Client <unknown> disconnected due to protocol error.
+1769644343: New connection from 172.18.0.1:46486 on port 1883.
+1769644343: Client <unknown> disconnected due to protocol error.
+1769644343: New connection from 172.18.0.1:46490 on port 1883.
+1769644343: Client <unknown> disconnected due to protocol error.
+1769644348: New connection from 172.18.0.1:46506 on port 1883.
+1769644348: Client <unknown> disconnected due to protocol error.
+1769644348: New connection from 172.18.0.1:46514 on port 1883.
+1769644348: Client <unknown> disconnected due to protocol error.
+1769644348: New connection from 172.18.0.1:46522 on port 1883.
+1769644348: Client <unknown> disconnected due to protocol error.
+1769644349: New connection from 172.18.0.1:46528 on port 1883.
+1769644349: Client <unknown> disconnected due to protocol error.
+1769644349: New connection from 172.18.0.1:46532 on port 1883.
+1769644349: Client <unknown> disconnected due to protocol error.
+1769644349: New connection from 172.18.0.1:46540 on port 1883.
+1769644349: Client <unknown> disconnected due to protocol error.
+1769644351: New connection from 172.18.0.1:55074 on port 1883.
+1769644351: Client <unknown> disconnected due to protocol error.
+1769644351: New connection from 172.18.0.1:55090 on port 1883.
+1769644351: Client <unknown> disconnected due to protocol error.
+1769644351: New connection from 172.18.0.1:55092 on port 1883.
+1769644351: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55106 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55112 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55124 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55130 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55142 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55150 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55154 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55164 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644352: New connection from 172.18.0.1:55176 on port 1883.
+1769644352: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55188 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55204 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55220 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55224 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55230 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55246 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55258 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55270 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55286 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55300 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55312 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55320 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55330 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55334 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55340 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55356 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55368 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55374 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55378 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55392 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644353: New connection from 172.18.0.1:55406 on port 1883.
+1769644353: Client <unknown> disconnected due to protocol error.
+1769644354: New connection from 172.18.0.1:55414 on port 1883.
+1769644354: Client <unknown> disconnected due to protocol error.
+1769644354: New connection from 172.18.0.1:55422 on port 1883.
+1769644354: Client <unknown> disconnected due to protocol error.
+1769644354: New connection from 172.18.0.1:55426 on port 1883.
+1769644354: Client <unknown> disconnected due to protocol error.
+1769644354: New connection from 172.18.0.1:55432 on port 1883.
+1769644354: Client <unknown> disconnected due to protocol error.
+1769644354: New connection from 172.18.0.1:55438 on port 1883.
+1769644354: Client <unknown> disconnected due to protocol error.
+1769644354: New connection from 172.18.0.1:55442 on port 1883.
+1769644354: Client <unknown> disconnected due to protocol error.
+1769644355: New connection from 172.18.0.1:55446 on port 1883.
+1769644355: Client <unknown> disconnected due to protocol error.
+1769644355: New connection from 172.18.0.1:55460 on port 1883.
+1769644355: Client <unknown> disconnected due to protocol error.
+1769644355: New connection from 172.18.0.1:55474 on port 1883.
+1769644355: Client <unknown> disconnected due to protocol error.
+1769644372: New connection from 172.18.0.1:58328 on port 1883.
+1769644372: Client <unknown> disconnected due to protocol error.
+1769644372: New connection from 172.18.0.1:58336 on port 1883.
+1769644372: Client <unknown> disconnected due to protocol error.
+1769644372: New connection from 172.18.0.1:58342 on port 1883.
+1769644372: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58348 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58354 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58360 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58366 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58376 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58392 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58408 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58416 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644375: New connection from 172.18.0.1:58430 on port 1883.
+1769644375: Client <unknown> disconnected due to protocol error.
+1769644376: New connection from 172.18.0.1:58442 on port 1883.
+1769644376: Client <unknown> disconnected due to protocol error.
+1769644376: New connection from 172.18.0.1:58448 on port 1883.
+1769644376: Client <unknown> disconnected due to protocol error.
+1769644376: New connection from 172.18.0.1:58460 on port 1883.
+1769644376: Client <unknown> disconnected due to protocol error.
+1769644694: New connection from 172.18.0.1:60240 on port 1883.
+1769644694: New client connected from 172.18.0.1:60240 as -iPhone (p2, c1, k60).
+1769644704: Client -iPhone closed its connection.
+1769645010: New connection from 172.18.0.1:40248 on port 1883.
+1769645010: New client connected from 172.18.0.1:40248 as -iPhone (p2, c1, k60).
+1769645012: Client -iPhone closed its connection.
+1769645086: New connection from 172.18.0.1:57262 on port 1883.
+1769645086: New client connected from 172.18.0.1:57262 as -iPhone (p2, c1, k60).
+1769645092: Client -iPhone closed its connection.
+1769645097: New connection from 172.18.0.1:39878 on port 1883.
+1769645097: New client connected from 172.18.0.1:39878 as -iPhone (p2, c1, k60).
+1769645169: Client -iPhone closed its connection.
+1769645599: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1769651095: Saving in-memory database to /mosquitto/data//mosquitto.db.
